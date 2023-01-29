@@ -116,24 +116,13 @@ enum Status: String, Codable {
 }
 
 enum TypeEnum: Codable {
-    case scripted
-    case reality
-    case animation
-    case other(String?)
+    typealias RawValue = String
+    case value(type: String?)
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
-        let value = try? container.decode(String.self)
-        switch value {
-        case "Scripted":
-            self = .scripted
-        case "Reality":
-            self = .reality
-        case "Animation":
-            self = .animation
-        default:
-            self = .other(value)
-        }
+        let language = try? container.decode(String.self)
+        self = .value(type: language)
     }
 }
 

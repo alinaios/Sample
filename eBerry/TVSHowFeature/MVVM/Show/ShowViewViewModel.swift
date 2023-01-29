@@ -34,10 +34,10 @@ struct ShowViewViewModel {
 
         // Type of show
         switch show.show.type {
-        case .some(.other(let typeName)):
-            type = typeName ?? ""
-        default:
+        case .none:
             type = ""
+        case .some(.value(let value)):
+            type = value ?? ""
         }
 
         // Language of show

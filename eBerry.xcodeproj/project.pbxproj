@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E000B6B32986E75100C757B8 /* ShowViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000B6B22986E75100C757B8 /* ShowViewViewModelTests.swift */; };
 		E0A5F84529842AD200BA4220 /* eBerryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F84429842AD200BA4220 /* eBerryApp.swift */; };
 		E0A5F84929842AD400BA4220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A5F84829842AD400BA4220 /* Assets.xcassets */; };
 		E0A5F84C29842AD400BA4220 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A5F84B29842AD400BA4220 /* Preview Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E000B6B22986E75100C757B8 /* ShowViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewViewModelTests.swift; sourceTree = "<group>"; };
 		E0A5F84129842AD200BA4220 /* eBerry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBerry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A5F84429842AD200BA4220 /* eBerryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eBerryApp.swift; sourceTree = "<group>"; };
 		E0A5F84829842AD400BA4220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E0A5F85529842AD400BA4220 /* eBerryTests.swift */,
+				E000B6B22986E75100C757B8 /* ShowViewViewModelTests.swift */,
 			);
 			path = eBerryTests;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E000B6B32986E75100C757B8 /* ShowViewViewModelTests.swift in Sources */,
 				E0A5F85629842AD400BA4220 /* eBerryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
