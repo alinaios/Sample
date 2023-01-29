@@ -15,7 +15,7 @@
 		E0A5F86229842AD400BA4220 /* eBerryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F86129842AD400BA4220 /* eBerryUITestsLaunchTests.swift */; };
 		E0A5F87129842BA600BA4220 /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87029842BA600BA4220 /* URLSessionManager.swift */; };
 		E0A5F87329842BC900BA4220 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87229842BC900BA4220 /* Routing.swift */; };
-		E0A5F87629842CC600BA4220 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87529842CC500BA4220 /* TVShow.swift */; };
+		E0A5F87629842CC600BA4220 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87529842CC500BA4220 /* Show.swift */; };
 		E0A5F87A29842D7D00BA4220 /* TVShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */; };
 		E0A5F87C29842DB600BA4220 /* TVShowDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87B29842DB600BA4220 /* TVShowDataService.swift */; };
 		E0A5F87E29842E6B00BA4220 /* TVShowListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87D29842E6B00BA4220 /* TVShowListParameter.swift */; };
@@ -30,6 +30,7 @@
 		E0A5F892298432DC00BA4220 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F891298432DC00BA4220 /* View+Ext.swift */; };
 		E0A5F89829843FAE00BA4220 /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F89729843FAE00BA4220 /* ShowView.swift */; };
 		E0A5F89B29868B8200BA4220 /* RegisteredServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F89A29868B8200BA4220 /* RegisteredServices.swift */; };
+		E0A5F8A02986A5D900BA4220 /* ShowViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F89F2986A5D900BA4220 /* ShowViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +62,7 @@
 		E0A5F86129842AD400BA4220 /* eBerryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eBerryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E0A5F87029842BA600BA4220 /* URLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
 		E0A5F87229842BC900BA4220 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
-		E0A5F87529842CC500BA4220 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		E0A5F87529842CC500BA4220 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListModel.swift; sourceTree = "<group>"; };
 		E0A5F87B29842DB600BA4220 /* TVShowDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDataService.swift; sourceTree = "<group>"; };
 		E0A5F87D29842E6B00BA4220 /* TVShowListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListParameter.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		E0A5F891298432DC00BA4220 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		E0A5F89729843FAE00BA4220 /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
 		E0A5F89A29868B8200BA4220 /* RegisteredServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredServices.swift; sourceTree = "<group>"; };
+		E0A5F89F2986A5D900BA4220 /* ShowViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,10 +216,8 @@
 		E0A5F89529843E5A00BA4220 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F87529842CC500BA4220 /* TVShow.swift */,
-				E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */,
-				E0A5F886298430FC00BA4220 /* TVShowListView.swift */,
-				E0A5F89729843FAE00BA4220 /* ShowView.swift */,
+				E0A5F89E2986A5B300BA4220 /* Show */,
+				E0A5F89D2986A5A300BA4220 /* Show List */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -231,6 +231,25 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		E0A5F89D2986A5A300BA4220 /* Show List */ = {
+			isa = PBXGroup;
+			children = (
+				E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */,
+				E0A5F886298430FC00BA4220 /* TVShowListView.swift */,
+			);
+			path = "Show List";
+			sourceTree = "<group>";
+		};
+		E0A5F89E2986A5B300BA4220 /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				E0A5F87529842CC500BA4220 /* Show.swift */,
+				E0A5F89F2986A5D900BA4220 /* ShowViewViewModel.swift */,
+				E0A5F89729843FAE00BA4220 /* ShowView.swift */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +260,7 @@
 				E0A5F83D29842AD200BA4220 /* Sources */,
 				E0A5F83E29842AD200BA4220 /* Frameworks */,
 				E0A5F83F29842AD200BA4220 /* Resources */,
+				E0A5F89C29868C8800BA4220 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -356,6 +376,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E0A5F89C29868C8800BA4220 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E0A5F83D29842AD200BA4220 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -370,13 +410,14 @@
 				E0A5F88E2984319B00BA4220 /* ActionButtonView.swift in Sources */,
 				E0A5F89B29868B8200BA4220 /* RegisteredServices.swift in Sources */,
 				E0A5F89829843FAE00BA4220 /* ShowView.swift in Sources */,
+				E0A5F8A02986A5D900BA4220 /* ShowViewViewModel.swift in Sources */,
 				E0A5F88029842EC000BA4220 /* DataFetchManager.swift in Sources */,
 				E0A5F87129842BA600BA4220 /* URLSessionManager.swift in Sources */,
 				E0A5F887298430FC00BA4220 /* TVShowListView.swift in Sources */,
 				E0A5F88C2984317700BA4220 /* EmptyContentText.swift in Sources */,
 				E0A5F88529842F2500BA4220 /* Publishers+Ext.swift in Sources */,
 				E0A5F892298432DC00BA4220 /* View+Ext.swift in Sources */,
-				E0A5F87629842CC600BA4220 /* TVShow.swift in Sources */,
+				E0A5F87629842CC600BA4220 /* Show.swift in Sources */,
 				E0A5F84529842AD200BA4220 /* eBerryApp.swift in Sources */,
 				E0A5F87C29842DB600BA4220 /* TVShowDataService.swift in Sources */,
 			);

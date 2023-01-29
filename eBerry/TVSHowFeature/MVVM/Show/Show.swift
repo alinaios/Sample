@@ -17,25 +17,25 @@ struct TVShowElement: Codable, Identifiable {
 // MARK: - Show
 struct Show: Codable {
     let id: Int
-    let url: String
-    let name: String
-    let type: TypeEnum
-    let language: Language
-    let genres: [String]
-    let status: Status
+    let url: String?
+    let name: String?
+    let type: TypeEnum?
+    let language: Language?
+    let genres: [String]?
+    let status: Status?
     let runtime, averageRuntime: Int?
     let premiered, ended: String?
     let officialSite: String?
-    let schedule: Schedule
-    let rating: Rating
-    let weight: Int
+    let schedule: Schedule?
+    let rating: Rating?
+    let weight: Int?
     let network, webChannel: Network?
     let dvdCountry: JSONNull?
-    let externals: Externals
-    let image: Image
+    let externals: Externals?
+    let image: Image?
     let summary: String?
-    let updated: Int
-    let links: Links
+    let updated: Int?
+    let links: Links?
 
     enum CodingKeys: String, CodingKey {
         case id, url, name, type, language, genres, status,
@@ -54,17 +54,23 @@ struct Externals: Codable {
 
 // MARK: - Image
 struct Image: Codable {
-    let medium, original: String
+    let medium, original: String?
 }
 
-enum Language: String, Codable {
-    case english = "English"
-    case mongolian = "Mongolian"
+enum Language: Codable {
+    typealias RawValue = String
+    case value(name: String?)
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let language = try? container.decode(String.self)
+        self = .value(name: language)
+    }
 }
 
 // MARK: - Links
 struct Links: Codable {
-    let linksSelf: Previousepisode
+    let linksSelf: Previousepisode?
     let previousepisode: Previousepisode?
 
     enum CodingKeys: String, CodingKey {
@@ -75,20 +81,20 @@ struct Links: Codable {
 
 // MARK: - Previousepisode
 struct Previousepisode: Codable {
-    let href: String
+    let href: String?
 }
 
 // MARK: - Network
 struct Network: Codable {
-    let id: Int
-    let name: String
+    let id: Int?
+    let name: String?
     let country: Country?
     let officialSite: String?
 }
 
 // MARK: - Country
 struct Country: Codable {
-    let name, code, timezone: String
+    let name, code, timezone: String?
 }
 
 // MARK: - Rating
@@ -98,18 +104,37 @@ struct Rating: Codable {
 
 // MARK: - Schedule
 struct Schedule: Codable {
-    let time: String
-    let days: [String]
+    let time: String?
+    let days: [String]?
 }
 
 enum Status: String, Codable {
     case ended = "Ended"
     case running = "Running"
     case toBeDetermined = "To Be Determined"
+    case inDevelopment = "In Development"
 }
 
-enum TypeEnum: String, Codable {
-    case scripted = "Scripted"
+enum TypeEnum: Codable {
+    case scripted
+    case reality
+    case animation
+    case other(String?)
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let value = try? container.decode(String.self)
+        switch value {
+        case "Scripted":
+            self = .scripted
+        case "Reality":
+            self = .reality
+        case "Animation":
+            self = .animation
+        default:
+            self = .other(value)
+        }
+    }
 }
 
 // MARK: - Encode/decode helpers
@@ -121,7 +146,7 @@ class JSONNull: Codable, Hashable {
     }
 
     public func hash(into hasher: inout Hasher) {
-          hasher.combine(0)
+        hasher.combine(0)
     }
 
     public init() {}

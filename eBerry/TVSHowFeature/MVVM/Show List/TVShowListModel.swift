@@ -68,6 +68,7 @@ extension TVShowListViewModel {
             case .onAppear:
                 return state
             case .onDataLoaded(let list):
+                print(list)
                 return list.isEmpty ? .empty : .loadedList(list)
             case .onFailedToLoadData(let error):
                 return .error(error)
@@ -82,7 +83,7 @@ extension TVShowListViewModel {
             switch state {
             case .loadingList:
                 return service
-                    .fetch(with: TVShowListParameter())
+                    .fetch(with: TVShowListParameter(query: "boys"))
                     .map(Event.onDataLoaded)
                     .catch { Just(Event.onFailedToLoadData($0)) }
                     .eraseToAnyPublisher()

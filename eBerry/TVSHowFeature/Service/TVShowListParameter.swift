@@ -6,7 +6,9 @@
 //
 
 import Foundation
-struct TVShowListParameter {}
+struct TVShowListParameter {
+    let query: String
+}
 
 extension TVShowListParameter: Routing {
     var method: RequestType {
@@ -14,6 +16,6 @@ extension TVShowListParameter: Routing {
     }
 
     var routePath: String {
-        return "search/shows?q=girls"
+        return "search/shows?q=\(query)"
     }
 }

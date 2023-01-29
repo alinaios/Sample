@@ -9,8 +9,6 @@ import Foundation
 import SwiftUI
 
 struct ActionButtonView: View {
-    let id = UUID().uuidString
-
     @State var title: String
     var cornerRadius: CGFloat?
     var font: Font?

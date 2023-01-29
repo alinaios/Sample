@@ -15,7 +15,7 @@ final class URLSessionManager {
     func fetch<T: Decodable, R: Routing>(_ routing: R) -> AnyPublisher<T, Error> {
         let urlSession = URLSession(configuration: .default)
 #if DEBUG
-        print(routing.urlRequest)
+        print(routing.urlRequest ?? "urlRequest is nil")
 #endif
         guard let url = routing.urlRequest else {
             fatalError("Could not create url")
