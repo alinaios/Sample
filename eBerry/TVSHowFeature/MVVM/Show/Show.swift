@@ -113,6 +113,7 @@ enum Status: String, Codable {
     case running = "Running"
     case toBeDetermined = "To Be Determined"
     case inDevelopment = "In Development"
+    case other
 }
 
 enum TypeEnum: Codable {
@@ -121,8 +122,8 @@ enum TypeEnum: Codable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
-        let language = try? container.decode(String.self)
-        self = .value(type: language)
+        let type = try? container.decode(String.self)
+        self = .value(type: type)
     }
 }
 
