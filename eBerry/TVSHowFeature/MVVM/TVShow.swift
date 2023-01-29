@@ -38,7 +38,10 @@ struct Show: Codable {
     let links: Links
 
     enum CodingKeys: String, CodingKey {
-        case id, url, name, type, language, genres, status, runtime, averageRuntime, premiered, ended, officialSite, schedule, rating, weight, network, webChannel, dvdCountry, externals, image, summary, updated
+        case id, url, name, type, language, genres, status,
+             runtime, averageRuntime, premiered, ended,
+             officialSite, schedule, rating, weight, network,
+             webChannel, dvdCountry, externals, image, summary, updated
         case links = "_links"
     }
 }
@@ -117,8 +120,8 @@ class JSONNull: Codable, Hashable {
         return true
     }
 
-    public var hashValue: Int {
-        return 0
+    public func hash(into hasher: inout Hasher) {
+          hasher.combine(0)
     }
 
     public init() {}
@@ -126,7 +129,9 @@ class JSONNull: Codable, Hashable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+            throw DecodingError.typeMismatch(JSONNull.self,
+                                             DecodingError.Context(codingPath: decoder.codingPath,
+                                                                   debugDescription: "Wrong type for JSONNull"))
         }
     }
 

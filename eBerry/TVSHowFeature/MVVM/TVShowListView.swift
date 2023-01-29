@@ -33,7 +33,7 @@ struct TVShowListView: View {
     }
 
     private func loadedList(list: [TVShowElement]) -> some View {
-        NavigationView{
+        NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: ProjectLayout.indent32, content: {
                     Spacer()
