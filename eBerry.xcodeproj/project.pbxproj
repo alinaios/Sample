@@ -17,9 +17,9 @@
 		E0A5F87329842BC900BA4220 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87229842BC900BA4220 /* Routing.swift */; };
 		E0A5F87629842CC600BA4220 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87529842CC500BA4220 /* TVShow.swift */; };
 		E0A5F87A29842D7D00BA4220 /* TVShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */; };
-		E0A5F87C29842DB600BA4220 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87B29842DB600BA4220 /* DataService.swift */; };
+		E0A5F87C29842DB600BA4220 /* TVShowDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87B29842DB600BA4220 /* TVShowDataService.swift */; };
 		E0A5F87E29842E6B00BA4220 /* TVShowListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87D29842E6B00BA4220 /* TVShowListParameter.swift */; };
-		E0A5F88029842EC000BA4220 /* TVShowFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87F29842EC000BA4220 /* TVShowFetchManager.swift */; };
+		E0A5F88029842EC000BA4220 /* DataFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */; };
 		E0A5F88329842F1100BA4220 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88229842F1100BA4220 /* Feedback.swift */; };
 		E0A5F88529842F2500BA4220 /* Publishers+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88429842F2500BA4220 /* Publishers+Ext.swift */; };
 		E0A5F887298430FC00BA4220 /* TVShowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F886298430FC00BA4220 /* TVShowListView.swift */; };
@@ -29,6 +29,7 @@
 		E0A5F8902984320500BA4220 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88F2984320500BA4220 /* Layout.swift */; };
 		E0A5F892298432DC00BA4220 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F891298432DC00BA4220 /* View+Ext.swift */; };
 		E0A5F89829843FAE00BA4220 /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F89729843FAE00BA4220 /* ShowView.swift */; };
+		E0A5F89B29868B8200BA4220 /* RegisteredServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F89A29868B8200BA4220 /* RegisteredServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +63,9 @@
 		E0A5F87229842BC900BA4220 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		E0A5F87529842CC500BA4220 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListModel.swift; sourceTree = "<group>"; };
-		E0A5F87B29842DB600BA4220 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E0A5F87B29842DB600BA4220 /* TVShowDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDataService.swift; sourceTree = "<group>"; };
 		E0A5F87D29842E6B00BA4220 /* TVShowListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListParameter.swift; sourceTree = "<group>"; };
-		E0A5F87F29842EC000BA4220 /* TVShowFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowFetchManager.swift; sourceTree = "<group>"; };
+		E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchManager.swift; sourceTree = "<group>"; };
 		E0A5F88229842F1100BA4220 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		E0A5F88429842F2500BA4220 /* Publishers+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publishers+Ext.swift"; sourceTree = "<group>"; };
 		E0A5F886298430FC00BA4220 /* TVShowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListView.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 		E0A5F88F2984320500BA4220 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		E0A5F891298432DC00BA4220 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		E0A5F89729843FAE00BA4220 /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
+		E0A5F89A29868B8200BA4220 /* RegisteredServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		E0A5F86E29842B6300BA4220 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				E0A5F89A29868B8200BA4220 /* RegisteredServices.swift */,
 				E0A5F8882984313000BA4220 /* Common Views */,
 				E0A5F88129842EDB00BA4220 /* Extensions */,
 				E0A5F86F29842B8500BA4220 /* Networking */,
@@ -171,9 +174,9 @@
 		E0A5F86F29842B8500BA4220 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */,
 				E0A5F87029842BA600BA4220 /* URLSessionManager.swift */,
 				E0A5F87229842BC900BA4220 /* Routing.swift */,
-				E0A5F87B29842DB600BA4220 /* DataService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -222,7 +225,7 @@
 		E0A5F89629843E6900BA4220 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F87F29842EC000BA4220 /* TVShowFetchManager.swift */,
+				E0A5F87B29842DB600BA4220 /* TVShowDataService.swift */,
 				E0A5F87D29842E6B00BA4220 /* TVShowListParameter.swift */,
 			);
 			path = Service;
@@ -365,8 +368,9 @@
 				E0A5F87329842BC900BA4220 /* Routing.swift in Sources */,
 				E0A5F88329842F1100BA4220 /* Feedback.swift in Sources */,
 				E0A5F88E2984319B00BA4220 /* ActionButtonView.swift in Sources */,
+				E0A5F89B29868B8200BA4220 /* RegisteredServices.swift in Sources */,
 				E0A5F89829843FAE00BA4220 /* ShowView.swift in Sources */,
-				E0A5F88029842EC000BA4220 /* TVShowFetchManager.swift in Sources */,
+				E0A5F88029842EC000BA4220 /* DataFetchManager.swift in Sources */,
 				E0A5F87129842BA600BA4220 /* URLSessionManager.swift in Sources */,
 				E0A5F887298430FC00BA4220 /* TVShowListView.swift in Sources */,
 				E0A5F88C2984317700BA4220 /* EmptyContentText.swift in Sources */,
@@ -374,7 +378,7 @@
 				E0A5F892298432DC00BA4220 /* View+Ext.swift in Sources */,
 				E0A5F87629842CC600BA4220 /* TVShow.swift in Sources */,
 				E0A5F84529842AD200BA4220 /* eBerryApp.swift in Sources */,
-				E0A5F87C29842DB600BA4220 /* DataService.swift in Sources */,
+				E0A5F87C29842DB600BA4220 /* TVShowDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

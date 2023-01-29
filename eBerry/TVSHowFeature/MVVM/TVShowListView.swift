@@ -8,10 +8,8 @@
 import Foundation
 import SwiftUI
 
-let registeredService = DataService(with: URLSessionManager())
-
 struct TVShowListView: View {
-    @ObservedObject var viewModel = TVShowListViewModel(service: registeredService)
+    @ObservedObject var viewModel = TVShowListViewModel(service: tvShowService)
     @State private var isShowingDetailView = false
 
     var body: some View {

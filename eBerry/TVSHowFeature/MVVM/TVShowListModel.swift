@@ -12,12 +12,12 @@ final class TVShowListViewModel: ObservableObject {
     @Published private(set) var state = State.loadingList
     private var bag = Set<AnyCancellable>()
     private let input = PassthroughSubject<Event, Never>()
-    private var service: DataService
-    init(service: DataService) {
+    private var service: TVShowDataService
+    init(service: TVShowDataService) {
         self.service = service
     }
 
-    private func fetch(service: DataService) {
+    private func fetch(service: TVShowDataService) {
         Publishers.system(
             initial: state,
             reduce: Self.reduce,
@@ -77,7 +77,7 @@ extension TVShowListViewModel {
         }
     }
 
-    static func whenLoading(service: DataService) -> Feedback<State, Event> {
+    static func whenLoading(service: TVShowDataService) -> Feedback<State, Event> {
         Feedback {(state: State) -> AnyPublisher<Event, Never> in
             switch state {
             case .loadingList:
