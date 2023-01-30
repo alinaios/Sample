@@ -14,17 +14,17 @@ final class ShowViewViewModelTests: XCTestCase {
         let viewModel = ShowViewViewModel(show: mockA)
         XCTAssertNil(viewModel.imageUrl)
     }
-  
+
     func testExistingImageUrl() throws {
         let viewModel = ShowViewViewModel(show: mockB)
         XCTAssertNotNil(viewModel.imageUrl)
     }
- 
+
     func testMissingShowUrl() throws {
         let viewModel = ShowViewViewModel(show: mockA)
         XCTAssertNil(viewModel.url)
     }
-  
+
     func testExistingShowUrl() throws {
         let viewModel = ShowViewViewModel(show: mockB)
         XCTAssertNotNil(viewModel.url)
@@ -34,27 +34,27 @@ final class ShowViewViewModelTests: XCTestCase {
         let viewModel = ShowViewViewModel(show: mockA)
         XCTAssertEqual(viewModel.name, "")
     }
- 
+
     func testExistingName() throws {
         let viewModel = ShowViewViewModel(show: mockB)
         XCTAssertNotNil(viewModel.name)
     }
-  
+
     func testMissingType() throws {
         let viewModel = ShowViewViewModel(show: mockA)
         XCTAssertEqual(viewModel.type, "")
     }
-  
+
     func testExistingType() throws {
         let viewModel = ShowViewViewModel(show: mockB)
         XCTAssertEqual(viewModel.type, "animation")
     }
-    
+
     func testMissingLanguage() throws {
         let viewModel = ShowViewViewModel(show: mockB)
         XCTAssertEqual(viewModel.language, "")
     }
-   
+
     func testExistingLanguage() throws {
         let viewModel = ShowViewViewModel(show: mockA)
         XCTAssertEqual(viewModel.language, "English")
@@ -106,8 +106,9 @@ let mockB = TVShowElement(score: 0.9082468,
                                      webChannel: nil,
                                      dvdCountry: nil,
                                      externals: nil,
-                                     image: Image(medium: "https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg",
-                                                  original: "https://static.tvmaze.com/uploads/images/original_untouched/31/78286.jpg"),
+                                     image: Image(medium: mediumImageURLString, original: originalImageURLString),
                                      summary: nil,
                                      updated: 1611310521,
                                      links: nil))
+let mediumImageURLString = "https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg"
+let originalImageURLString = "https://static.tvmaze.com/uploads/images/original_untouched/31/78286.jpg"
