@@ -54,9 +54,9 @@ extension Routing {
         }
 
         if !routePath.isEmpty {
-            url.appendPathComponent(routePath)
+            let encoded = routePath.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+            url.appendPathComponent(encoded ?? "")
         }
-
         guard let newUrl = URL(string: url.absoluteString.removingPercentEncoding ?? url.absoluteString) else {
 #if DEV
             print("cannot create removingPercentEncoding URL")
