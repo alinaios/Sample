@@ -17,13 +17,13 @@ final class TVShowListViewModel: ObservableObject {
         self.service = service
     }
 
-    private func fetch(service: TVShowDataService) {
+    private func fetch(service: TVShowDataService, query: String) {
         Publishers.system(
             initial: state,
             reduce: Self.reduce,
             scheduler: RunLoop.main,
             feedbacks: [
-                Self.whenLoading(service: service),
+                Self.whenLoading(service: service, query: query),
                 Self.userInput(input: input.eraseToAnyPublisher())
             ]
         )
@@ -37,8 +37,9 @@ final class TVShowListViewModel: ObservableObject {
 
     func send(event: Event) {
         switch event {
-        case .onAppear:
-            fetch(service: self.service)
+        case .onAppear(let query):
+            state = State.loadingList
+            fetch(service: self.service, query: query)
         default:
             break
         }
@@ -55,7 +56,7 @@ extension TVShowListViewModel {
 
     // UI events
     enum Event {
-        case onAppear
+        case onAppear(String)
         case onDataLoaded([TVShowElement])
         case onFailedToLoadData(Error)
     }
@@ -68,7 +69,6 @@ extension TVShowListViewModel {
             case .onAppear:
                 return state
             case .onDataLoaded(let list):
-                print(list)
                 return list.isEmpty ? .empty : .loadedList(list)
             case .onFailedToLoadData(let error):
                 return .error(error)
@@ -78,12 +78,12 @@ extension TVShowListViewModel {
         }
     }
 
-    static func whenLoading(service: TVShowDataService) -> Feedback<State, Event> {
+    static func whenLoading(service: TVShowDataService, query: String) -> Feedback<State, Event> {
         Feedback {(state: State) -> AnyPublisher<Event, Never> in
             switch state {
             case .loadingList:
                 return service
-                    .fetch(with: TVShowListParameter(query: "boys"))
+                    .fetch(with: TVShowListParameter(query: query))
                     .map(Event.onDataLoaded)
                     .catch { Just(Event.onFailedToLoadData($0)) }
                     .eraseToAnyPublisher()

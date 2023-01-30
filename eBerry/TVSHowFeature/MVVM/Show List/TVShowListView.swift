@@ -11,10 +11,11 @@ import SwiftUI
 struct TVShowListView: View {
     @ObservedObject var viewModel = TVShowListViewModel(service: tvShowService)
     @State private var isShowingDetailView = false
+    @State private var query: String = "boys"
 
     var body: some View {
         content.onAppear {
-            viewModel.send(event: .onAppear)
+            viewModel.send(event: .onAppear(query))
         }.ignoresSafeArea(.container, edges: [.bottom])
     }
 
@@ -28,20 +29,20 @@ struct TVShowListView: View {
             return EmptyContentText(title: error.localizedDescription,
                                     buttonTitle: "Retry").eraseToAnyView()
         case .empty:
-            return Spinner(isAnimating: true, style: .large).eraseToAnyView()
+            return emptyResults().eraseToAnyView()
         }
     }
 
     private func loadedList(list: [TVShowElement]) -> some View {
-        NavigationView {
+        return NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: ProjectLayout.indent32, content: {
-                    Spacer()
+                    searchHeader(query: $query)
                     ForEach(list) { currentItem in
                         elementView(show: currentItem)
                     }
-                })
-            }.navigationTitle("TV Shows for girls")
+                }).padding()
+            }.navigationTitle("TV Shows for \(query)")
         }
     }
 
@@ -51,6 +52,26 @@ struct TVShowListView: View {
                 AsyncImage(url: URL(string: show.show.image?.medium ?? ""))
                 Text(show.show.name ?? "no name")
             })
+        }
+    }
+
+    private func searchHeader(query: Binding<String>) -> some View {
+        VStack(alignment: .leading, spacing: ProjectLayout.indent24, content: {
+            SearchView(text: query, searchButtonHandler: {
+                viewModel.send(event: .onAppear(query.wrappedValue))
+            })
+        })
+    }
+
+    private func emptyResults() -> some View {
+        return NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: ProjectLayout.indent24, content: {
+                    searchHeader(query: $query)
+                    EmptyContentText(title: "no results")
+                    Spacer()
+                }).padding()
+            }.navigationTitle("TV Shows for \(query)")
         }
     }
 }
