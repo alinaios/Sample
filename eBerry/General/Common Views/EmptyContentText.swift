@@ -12,13 +12,17 @@ struct EmptyContentText: View {
     @State var title: String
     @State var subTitle: String?
     @State var buttonTitle: String?
+    var actionHandler: (() -> Void)?
 
     var body: some View {
         VStack(alignment: .center, spacing: ProjectLayout.indent24, content: {
             Text(title)
             Text(subTitle ?? "")
             if let title = buttonTitle {
-                ActionButtonView(title: title, actionHandler: {})
+                ActionButtonView(title: title,
+                                 actionHandler: {
+                    actionHandler?()
+                })
             }
         }).frame(width: 300)
     }

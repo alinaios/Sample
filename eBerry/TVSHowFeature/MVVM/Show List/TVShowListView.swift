@@ -24,16 +24,15 @@ struct TVShowListView: View {
         case .loadingList:
             return Spinner(isAnimating: true, style: .large).eraseToAnyView()
         case .loadedList(let list):
-            return loadedList(list: list).eraseToAnyView()
+            return loadedListView(list: list).eraseToAnyView()
         case .error(let error):
-            return EmptyContentText(title: error.localizedDescription,
-                                    buttonTitle: "Retry").eraseToAnyView()
+            return errorView(error: error).eraseToAnyView()
         case .empty:
-            return emptyResults().eraseToAnyView()
+            return emptyResultsView().eraseToAnyView()
         }
     }
 
-    private func loadedList(list: [TVShowElement]) -> some View {
+    private func loadedListView(list: [TVShowElement]) -> some View {
         return NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: ProjectLayout.indent32, content: {
@@ -63,7 +62,7 @@ struct TVShowListView: View {
         })
     }
 
-    private func emptyResults() -> some View {
+    private func emptyResultsView() -> some View {
         return NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: ProjectLayout.indent24, content: {
@@ -72,6 +71,12 @@ struct TVShowListView: View {
                     Spacer()
                 }).padding()
             }.navigationTitle("TV Shows for \(query)")
+        }
+    }
+
+    private func errorView(error: Error) -> some View {
+        return EmptyContentText(title: error.localizedDescription, buttonTitle: "Retry") {
+            viewModel.send(event: .onAppear(query))
         }
     }
 }
