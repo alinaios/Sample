@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E000B6B32986E75100C757B8 /* ShowViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E000B6B22986E75100C757B8 /* ShowViewViewModelTests.swift */; };
 		E067B4FC2987C229009A188F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E067B4FB2987C229009A188F /* SearchView.swift */; };
+		E067B501298951D8009A188F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E067B503298951D8009A188F /* Localizable.strings */; };
 		E0A5F84529842AD200BA4220 /* eBerryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F84429842AD200BA4220 /* eBerryApp.swift */; };
 		E0A5F84929842AD400BA4220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A5F84829842AD400BA4220 /* Assets.xcassets */; };
 		E0A5F84C29842AD400BA4220 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A5F84B29842AD400BA4220 /* Preview Assets.xcassets */; };
@@ -55,6 +56,8 @@
 /* Begin PBXFileReference section */
 		E000B6B22986E75100C757B8 /* ShowViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewViewModelTests.swift; sourceTree = "<group>"; };
 		E067B4FB2987C229009A188F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E067B502298951D8009A188F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E067B504298951E0009A188F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E0A5F84129842AD200BA4220 /* eBerry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eBerry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A5F84429842AD200BA4220 /* eBerryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eBerryApp.swift; sourceTree = "<group>"; };
 		E0A5F84829842AD400BA4220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 				E0A5F84429842AD200BA4220 /* eBerryApp.swift */,
 				E0A5F84829842AD400BA4220 /* Assets.xcassets */,
 				E0A5F84A29842AD400BA4220 /* Preview Content */,
+				E067B503298951D8009A188F /* Localizable.strings */,
 			);
 			path = eBerry;
 			sourceTree = "<group>";
@@ -343,6 +347,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = E0A5F83829842AD200BA4220;
 			productRefGroup = E0A5F84229842AD200BA4220 /* Products */;
@@ -362,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A5F84C29842AD400BA4220 /* Preview Assets.xcassets in Resources */,
+				E067B501298951D8009A188F /* Localizable.strings in Resources */,
 				E0A5F84929842AD400BA4220 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +468,18 @@
 			targetProxy = E0A5F85C29842AD400BA4220 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E067B503298951D8009A188F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E067B502298951D8009A188F /* sv */,
+				E067B504298951E0009A188F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E0A5F86329842AD400BA4220 /* Debug */ = {

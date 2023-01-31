@@ -17,7 +17,7 @@ struct ShowView: View {
             Text(viewModel.type)
             Text(viewModel.language)
             if let destinationUrl = viewModel.url {
-                Link("Link", destination: destinationUrl)
+                Link("link", destination: destinationUrl)
             }
             if let imageUrl = viewModel.imageUrl {
                 AsyncImage(url: imageUrl)

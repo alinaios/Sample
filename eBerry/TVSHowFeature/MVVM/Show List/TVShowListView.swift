@@ -11,7 +11,7 @@ import SwiftUI
 struct TVShowListView: View {
     @ObservedObject var viewModel = TVShowListViewModel(service: tvShowService)
     @State private var isShowingDetailView = false
-    @State private var query: String = "boys"
+    @State private var query: String = String(localized: "default placeholder", comment: "search")
 
     var body: some View {
         content.onAppear {
@@ -41,7 +41,7 @@ struct TVShowListView: View {
                         elementView(show: currentItem)
                     }
                 }).padding()
-            }.navigationTitle("TV Shows for \(query)")
+            }.navigationTitle("search").navigationBarTitleDisplayMode(.inline)
         }
     }
 
@@ -49,7 +49,7 @@ struct TVShowListView: View {
         NavigationLink(destination: ShowView(viewModel: ShowViewViewModel(show: show))) {
             HStack(spacing: ProjectLayout.indent32, content: {
                 AsyncImage(url: URL(string: show.show.image?.medium ?? ""))
-                Text(show.show.name ?? "no name")
+                Text(show.show.name ?? "")
             })
         }
     }
@@ -67,15 +67,16 @@ struct TVShowListView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: ProjectLayout.indent24, content: {
                     searchHeader(query: $query)
-                    EmptyContentText(title: "no results")
+                    Text(String(localized: "no results \(query)", comment: "inquiry not found"))
                     Spacer()
                 }).padding()
-            }.navigationTitle("TV Shows for \(query)")
+            }.navigationTitle("search").navigationBarTitleDisplayMode(.inline)
         }
     }
 
     private func errorView(error: Error) -> some View {
-        return EmptyContentText(title: error.localizedDescription, buttonTitle: "Retry") {
+        return EmptyContentText(title: error.localizedDescription,
+                                buttonTitle: String(localized: "retry", comment: "")) {
             viewModel.send(event: .onAppear(query))
         }
     }
