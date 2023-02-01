@@ -8,11 +8,15 @@
 import Foundation
 import Combine
 
+protocol URLSessionManagerProtocol {
+    func fetch<T: Decodable, R: Routing>(_ routing: R) -> AnyPublisher<T, Error>
+}
+
 class DataFetchManager {
 
-    let manager: URLSessionManager
+    let manager: URLSessionManagerProtocol
 
-    init(with sessionManager: URLSessionManager) {
+    init(with sessionManager: URLSessionManagerProtocol) {
         manager = sessionManager
     }
 

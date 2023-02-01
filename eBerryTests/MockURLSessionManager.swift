@@ -1,16 +1,21 @@
 //
-//  URLSessionManager.swift
-//  eBerry
+//  MockURLSessionManager.swift
+//  eBerryTests
 //
-//  Created by A H on 2023-01-27.
+//  Created by A H on 2023-02-01.
 //
 
 import Foundation
 import Combine
+@testable import eBerry
 
-final class URLSessionManager: URLSessionManagerProtocol {
+final class MockURLSessionManager: URLSessionManagerProtocol {
 
-    init() {}
+    var request: URLRequest?
+
+    init(urlRequest: URLRequest) {
+        request = urlRequest
+    }
 
     func fetch<T: Decodable, R: Routing>(_ routing: R) -> AnyPublisher<T, Error> {
         let urlSession = URLSession(configuration: .default)
