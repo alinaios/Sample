@@ -23,3 +23,10 @@ struct ActionButtonView: View {
         }
     }
 }
+struct ActionButtonView_Previews: PreviewProvider {
+    @State static var title = "girls"
+
+    static var previews: some View {
+        ActionButtonView(title: title)
+    }
+}

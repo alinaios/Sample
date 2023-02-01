@@ -27,3 +27,14 @@ struct EmptyContentText: View {
         }).frame(width: 300)
     }
 }
+struct EmptyContentText_Previews: PreviewProvider {
+    @State static var title = "No internet"
+    @State static var subitle = "Your network is spotty"
+    @State static var buttonTitle = "Retry"
+
+    static var previews: some View {
+        EmptyContentText(title: title,
+                         subTitle: subitle,
+                         buttonTitle: buttonTitle).background(.gray)
+    }
+}

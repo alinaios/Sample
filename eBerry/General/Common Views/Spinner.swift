@@ -26,3 +26,8 @@ struct Spinner: UIViewRepresentable {
         }
     }
 }
+struct Spinner_Previews: PreviewProvider {
+    static var previews: some View {
+        Spinner(isAnimating: true, style: .large).background(.red)
+    }
+}
