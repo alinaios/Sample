@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShowViewViewModel {
+struct ShowViewModel {
     let name: String
     let url: URL?
     let imageUrl: URL?

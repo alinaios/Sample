@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ShowView: View {
-    @State var viewModel: ShowViewViewModel
+    @State var viewModel: ShowViewModel
 
     var body: some View {
         VStack(alignment: .center, spacing: ProjectLayout.indent24, content: {

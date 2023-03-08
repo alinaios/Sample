@@ -1,5 +1,5 @@
 //
-//  ShowViewViewModelTests.swift
+//  ShowViewModelTests.swift
 //  SampleTests
 //
 //  Created by AH on 2023-01-29.
@@ -8,55 +8,55 @@
 import XCTest
 @testable import Sample
 
-final class ShowViewViewModelTests: XCTestCase {
+final class ShowStatusViewModelTests: XCTestCase {
 
     func testMissingImageUrl() throws {
-        let viewModel = ShowViewViewModel(show: mockA)
+        let viewModel = ShowViewModel(show: mockA)
         XCTAssertNil(viewModel.imageUrl)
     }
 
     func testExistingImageUrl() throws {
-        let viewModel = ShowViewViewModel(show: mockB)
+        let viewModel = ShowViewModel(show: mockB)
         XCTAssertNotNil(viewModel.imageUrl)
     }
 
     func testMissingShowUrl() throws {
-        let viewModel = ShowViewViewModel(show: mockA)
+        let viewModel = ShowViewModel(show: mockA)
         XCTAssertNil(viewModel.url)
     }
 
     func testExistingShowUrl() throws {
-        let viewModel = ShowViewViewModel(show: mockB)
+        let viewModel = ShowViewModel(show: mockB)
         XCTAssertNotNil(viewModel.url)
     }
 
     func testMissingName() throws {
-        let viewModel = ShowViewViewModel(show: mockA)
+        let viewModel = ShowViewModel(show: mockA)
         XCTAssertEqual(viewModel.name, "")
     }
 
     func testExistingName() throws {
-        let viewModel = ShowViewViewModel(show: mockB)
+        let viewModel = ShowViewModel(show: mockB)
         XCTAssertNotNil(viewModel.name)
     }
 
     func testMissingType() throws {
-        let viewModel = ShowViewViewModel(show: mockA)
+        let viewModel = ShowViewModel(show: mockA)
         XCTAssertEqual(viewModel.type, "")
     }
 
     func testExistingType() throws {
-        let viewModel = ShowViewViewModel(show: mockB)
+        let viewModel = ShowViewModel(show: mockB)
         XCTAssertEqual(viewModel.type, "animation")
     }
 
     func testMissingLanguage() throws {
-        let viewModel = ShowViewViewModel(show: mockB)
+        let viewModel = ShowViewModel(show: mockB)
         XCTAssertEqual(viewModel.language, "")
     }
 
     func testExistingLanguage() throws {
-        let viewModel = ShowViewViewModel(show: mockA)
+        let viewModel = ShowViewModel(show: mockA)
         XCTAssertEqual(viewModel.language, "English")
     }
 }

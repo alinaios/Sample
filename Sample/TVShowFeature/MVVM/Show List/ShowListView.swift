@@ -46,7 +46,7 @@ struct ShowListView: View {
     }
 
     private func elementView(show: ShowElement) -> some View {
-        NavigationLink(destination: ShowView(viewModel: ShowViewViewModel(show: show))) {
+        NavigationLink(destination: ShowView(viewModel: ShowViewModel(show: show))) {
             HStack(spacing: ProjectLayout.indent32, content: {
                 AsyncImage(url: URL(string: show.show.image?.medium ?? ""))
                 Text(show.show.name ?? "")
