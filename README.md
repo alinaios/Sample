@@ -1,12 +1,36 @@
-# eBerry
+# Sample
  
-Progress in 2 hours 16 mins
-
-https://user-images.githubusercontent.com/85871814/215162061-1519b749-5e37-45f1-b71e-3db2c0dc1dab.mov
+User searches a TV show from a list https://api.tvmaze.com/ and previews the details
 
 
-
-Recent iteration
-https://user-images.githubusercontent.com/85871814/215815340-5e37d928-5a3e-4462-9dbc-f22c232f30ea.mov
+### Frameworks
 
 SwiftUI + Combine
+
+### Scenarios (Acceptance Criteria)
+
+``` 
+Given application has internet connection
+When user launches the application
+User can preview list of tv shows with predefined search query
+```
+
+``` 
+Given application has NO internet connection
+When user launches the application
+User recieves no internet connection message and possibility to retry
+```
+
+``` 
+Given application has internet connection
+When user launches the application
+User can preview list of tv shows with predefined search query
+When user taps any specific show
+User is navigated to preview show details
+```
+
+``` 
+Given application has NO internet connection
+When user taps any specific show
+User is shown a message about no internet connection
+```
