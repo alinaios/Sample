@@ -3,7 +3,6 @@
 User searches a TV show from a list https://api.tvmaze.com/ and previews the details
 
 ```
-### Frameworks and SDK
 SwiftUI + Combine
 Xcode Version 14.2
 ```
@@ -78,7 +77,7 @@ Xcode Version 14.2
             }
         }
     },
-
+...]
 ```
 
 
