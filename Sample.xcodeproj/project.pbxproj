@@ -111,6 +111,7 @@
 				E0E8CAEC29B8DDC600928274 /* README.md */,
 				E0A5F84429842AD200BA4220 /* SampleApp.swift */,
 				E0A5F89A29868B8200BA4220 /* CompositionRoot.swift */,
+				E0A5F86F29842B8500BA4220 /* Networking */,
 				E0A5F84329842AD200BA4220 /* Sample */,
 				E0A5F85429842AD400BA4220 /* SampleTests */,
 				E0A5F84229842AD200BA4220 /* Products */,
@@ -130,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				E0E8CAF329B8FC4200928274 /* Features */,
-				E0A5F86F29842B8500BA4220 /* Networking */,
 				E0A5F86E29842B6300BA4220 /* General */,
 				E0A5F84829842AD400BA4220 /* Assets.xcassets */,
 				E0A5F84A29842AD400BA4220 /* Preview Content */,

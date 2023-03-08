@@ -8,5 +8,6 @@
 import Foundation
 
 let projectBaseURL = "https://api.tvmaze.com/"
-let tvShowService = TVShowDataFetchManager(with: URLSessionManager())
+let networkSessionManager = URLSessionManager()
+let tvShowService = TVShowDataFetchManager(with: networkSessionManager)
 let tvShowViewModel = ShowListViewModel(service: tvShowService)
