@@ -24,7 +24,7 @@ struct ActionButtonView: View {
     }
 }
 struct ActionButtonView_Previews: PreviewProvider {
-    @State static var title = "girls"
+    @State static var title = "Search"
 
     static var previews: some View {
         ActionButtonView(title: title)

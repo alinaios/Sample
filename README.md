@@ -1,12 +1,9 @@
-# eBerry
+# Sample
  
-Progress in 2 hours 16 mins
-
-https://user-images.githubusercontent.com/85871814/215162061-1519b749-5e37-45f1-b71e-3db2c0dc1dab.mov
-
+This is sample application shows list of TV shows from https://api.tvmaze.com/ 
+User searches a tv show in a list and previews the details
 
 
-Recent iteration
-https://user-images.githubusercontent.com/85871814/215815340-5e37d928-5a3e-4462-9dbc-f22c232f30ea.mov
+### Frameworks
 
 SwiftUI + Combine

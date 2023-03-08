@@ -7,5 +7,6 @@
 
 import Foundation
 
-let ShowService = ShowDataService(with: URLSessionManager())
 let projectBaseURL = "https://api.tvmaze.com/"
+let tvShowService = ShowDataService(with: URLSessionManager())
+let tvShowViewModel = ShowListViewModel(service: tvShowService)

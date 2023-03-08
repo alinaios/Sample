@@ -41,6 +41,7 @@
 		E0DED189298ADA8A000BEBE9 /* fullResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E0DED184298AC180000BEBE9 /* fullResponse.json */; };
 		E0DED18B298ADCE3000BEBE9 /* fullResponse.json in Sources */ = {isa = PBXBuildFile; fileRef = E0DED184298AC180000BEBE9 /* fullResponse.json */; };
 		E0DED18D298ADD0A000BEBE9 /* fullResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E0DED184298AC180000BEBE9 /* fullResponse.json */; };
+		E0E8CAED29B8DDC600928274 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E0E8CAEC29B8DDC600928274 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		E0DED180298ABF56000BEBE9 /* MockURLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionManager.swift; sourceTree = "<group>"; };
 		E0DED184298AC180000BEBE9 /* fullResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fullResponse.json; sourceTree = "<group>"; };
 		E0DED186298AC64F000BEBE9 /* XCTestCase+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Ext.swift"; sourceTree = "<group>"; };
+		E0E8CAEC29B8DDC600928274 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		E0A5F83829842AD200BA4220 = {
 			isa = PBXGroup;
 			children = (
+				E0E8CAEC29B8DDC600928274 /* README.md */,
 				E0A5F84329842AD200BA4220 /* Sample */,
 				E0A5F85429842AD400BA4220 /* SampleTests */,
 				E0A5F85E29842AD400BA4220 /* SampleUITests */,
@@ -146,8 +149,8 @@
 		E0A5F84329842AD200BA4220 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F87429842C2300BA4220 /* TVShowFeature */,
 				E0A5F86E29842B6300BA4220 /* General */,
+				E0A5F87429842C2300BA4220 /* TVShowFeature */,
 				E0A5F84429842AD200BA4220 /* SampleApp.swift */,
 				E0A5F84829842AD400BA4220 /* Assets.xcassets */,
 				E0A5F84A29842AD400BA4220 /* Preview Content */,
@@ -383,6 +386,7 @@
 			files = (
 				E0DED18D298ADD0A000BEBE9 /* fullResponse.json in Resources */,
 				E0A5F84C29842AD400BA4220 /* Preview Assets.xcassets in Resources */,
+				E0E8CAED29B8DDC600928274 /* README.md in Resources */,
 				E067B501298951D8009A188F /* Localizable.strings in Resources */,
 				E0A5F84929842AD400BA4220 /* Assets.xcassets in Resources */,
 			);

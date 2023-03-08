@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 
 struct ShowListView: View {
-    @ObservedObject var viewModel = ShowListViewModel(service: ShowService)
+    @ObservedObject var viewModel: ShowListViewModel
     @State private var isShowingDetailView = false
     @State private var query: String = String(localized: "default placeholder", comment: "search")
 
     var body: some View {
         content.onAppear {
             viewModel.send(event: .onAppear(query))
-        }.ignoresSafeArea(.container, edges: [.bottom])
+        }
     }
 
     private var content: some View {

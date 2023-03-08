@@ -53,7 +53,7 @@ struct ClearButton: ViewModifier {
 }
 
 struct SearchView_Previews: PreviewProvider {
-    @State static var value = "girls"
+    @State static var value = "What are you looking for?"
 
     static var previews: some View {
        SearchView(text: $value) {}

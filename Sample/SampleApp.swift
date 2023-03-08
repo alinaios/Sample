@@ -11,7 +11,7 @@ import SwiftUI
 struct BerryApp: App {
     var body: some Scene {
         WindowGroup {
-            ShowListView()
+            ShowListView(viewModel: tvShowViewModel)
         }
     }
 }
