@@ -14,7 +14,7 @@ struct ShowViewViewModel {
     let type: String
     let language: String
 
-    init(show: TVShowElement) {
+    init(show: ShowElement) {
         // Name of show
         name = show.show.name ?? ""
 

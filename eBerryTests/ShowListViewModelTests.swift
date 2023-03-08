@@ -10,19 +10,19 @@ import Combine
 import XCTest
 
 final class ShowListViewModelTests: XCTestCase {
-    var service: TVShowDataService!
-    var viewModel: TVShowListViewModel!
+    var service: ShowDataService!
+    var viewModel: ShowListViewModel!
     private var bag = Set<AnyCancellable>()
 
     func testEmptyShowList() throws {
 
         let request = URLRequest(url: Bundle.main.url(forResource: "fullResponse", withExtension: "json")!)
 
-        service = TVShowDataService(with: MockURLSessionManager(urlRequest: request))
+        service = ShowDataService(with: MockURLSessionManager(urlRequest: request))
 
         // Initilize view model
-        viewModel = TVShowListViewModel(service: service)
-        viewModel.send(event: TVShowListViewModel.Event.onAppear("girlaaaas"))
+        viewModel = ShowListViewModel(service: service)
+        viewModel.send(event: ShowListViewModel.Event.onAppear("girlaaaas"))
 
         let statePublisher = viewModel.$state
             .collect(2)
@@ -44,11 +44,11 @@ final class ShowListViewModelTests: XCTestCase {
     func testFullShowList() throws {
         let request = URLRequest(url: Bundle.main.url(forResource: "fullResponse", withExtension: "json")!)
 
-        service = TVShowDataService(with: MockURLSessionManager(urlRequest: request))
+        service = ShowDataService(with: MockURLSessionManager(urlRequest: request))
 
         // Initilize view model
-        viewModel = TVShowListViewModel(service: service)
-        viewModel.send(event: TVShowListViewModel.Event.onAppear("girls"))
+        viewModel = ShowListViewModel(service: service)
+        viewModel.send(event: ShowListViewModel.Event.onAppear("girls"))
 
         let statePublisher = viewModel.$state
             .collect(2)

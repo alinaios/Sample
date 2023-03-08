@@ -61,7 +61,7 @@ final class ShowViewViewModelTests: XCTestCase {
     }
 }
 
-let mockA = TVShowElement(score: 0.9082468,
+let mockA = ShowElement(score: 0.9082468,
                           show: Show(id: 139,
                                      url: nil,
                                      name: nil,
@@ -86,7 +86,7 @@ let mockA = TVShowElement(score: 0.9082468,
                                      updated: 1611310521,
                                      links: nil))
 
-let mockB = TVShowElement(score: 0.9082468,
+let mockB = ShowElement(score: 0.9082468,
                           show: Show(id: 139,
                                      url: "https://www.tvmaze.com/shows/139/girls",
                                      name: "Girls",

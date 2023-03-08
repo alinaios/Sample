@@ -1,5 +1,5 @@
 //
-//  TVShowListView.swift
+//  ShowListView.swift
 //  eBerry
 //
 //  Created by A H on 2023-01-27.
@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct TVShowListView: View {
-    @ObservedObject var viewModel = TVShowListViewModel(service: tvShowService)
+struct ShowListView: View {
+    @ObservedObject var viewModel = ShowListViewModel(service: ShowService)
     @State private var isShowingDetailView = false
     @State private var query: String = String(localized: "default placeholder", comment: "search")
 
@@ -32,7 +32,7 @@ struct TVShowListView: View {
         }
     }
 
-    private func loadedListView(list: [TVShowElement]) -> some View {
+    private func loadedListView(list: [ShowElement]) -> some View {
         return NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: ProjectLayout.indent32, content: {
@@ -45,7 +45,7 @@ struct TVShowListView: View {
         }
     }
 
-    private func elementView(show: TVShowElement) -> some View {
+    private func elementView(show: ShowElement) -> some View {
         NavigationLink(destination: ShowView(viewModel: ShowViewViewModel(show: show))) {
             HStack(spacing: ProjectLayout.indent32, content: {
                 AsyncImage(url: URL(string: show.show.image?.medium ?? ""))

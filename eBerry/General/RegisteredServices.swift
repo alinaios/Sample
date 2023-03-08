@@ -7,4 +7,5 @@
 
 import Foundation
 
-let tvShowService = TVShowDataService(with: URLSessionManager())
+let ShowService = ShowDataService(with: URLSessionManager())
+let projectBaseURL = "https://api.tvmaze.com/"

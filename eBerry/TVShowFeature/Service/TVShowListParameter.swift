@@ -1,16 +1,16 @@
 //
-//  TVShowListParameters.swift
+//  ShowListParameters.swift
 //  eBerry
 //
 //  Created by A H on 2023-01-27.
 //
 
 import Foundation
-struct TVShowListParameter {
+struct ShowListParameter {
     let query: String
 }
 
-extension TVShowListParameter: Routing {
+extension ShowListParameter: Routing {
     var method: RequestType {
         return .GET
     }

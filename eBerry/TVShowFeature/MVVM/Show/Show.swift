@@ -1,5 +1,5 @@
 //
-//  TVShow.swift
+//  Show.swift
 //  eBerry
 //
 //  Created by A H on 2023-01-27.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - TVShowElement
-struct TVShowElement: Codable, Identifiable {
+// MARK: - ShowElement
+struct ShowElement: Codable, Identifiable {
     let id = UUID().uuidString
     let score: Double
     let show: Show

@@ -1,5 +1,5 @@
 //
-//  TVShowListModel.swift
+//  ShowListModel.swift
 //  eBerry
 //
 //  Created by A H on 2023-01-27.
@@ -8,16 +8,16 @@
 import Foundation
 import Combine
 
-final class TVShowListViewModel: ObservableObject {
+final class ShowListViewModel: ObservableObject {
     @Published private(set) var state = State.loadingList
     private var bag = Set<AnyCancellable>()
     private let input = PassthroughSubject<Event, Never>()
-    private var service: TVShowDataService
-    init(service: TVShowDataService) {
+    private var service: ShowDataService
+    init(service: ShowDataService) {
         self.service = service
     }
 
-    private func fetch(service: TVShowDataService, query: String) {
+    private func fetch(service: ShowDataService, query: String) {
         Publishers.system(
             initial: state,
             reduce: Self.reduce,
@@ -45,11 +45,11 @@ final class TVShowListViewModel: ObservableObject {
         }
     }
 }
-extension TVShowListViewModel {
+extension ShowListViewModel {
     // System states
     enum State {
         case loadingList
-        case loadedList([TVShowElement])
+        case loadedList([ShowElement])
         case error(Error)
         case empty
     }
@@ -57,11 +57,11 @@ extension TVShowListViewModel {
     // UI events
     enum Event {
         case onAppear(String)
-        case onDataLoaded([TVShowElement])
+        case onDataLoaded([ShowElement])
         case onFailedToLoadData(Error)
     }
 }
-extension TVShowListViewModel {
+extension ShowListViewModel {
     static func reduce(_ state: State, _ event: Event) -> State {
         switch state {
         case .loadingList:
@@ -78,12 +78,12 @@ extension TVShowListViewModel {
         }
     }
 
-    static func whenLoading(service: TVShowDataService, query: String) -> Feedback<State, Event> {
+    static func whenLoading(service: ShowDataService, query: String) -> Feedback<State, Event> {
         Feedback {(state: State) -> AnyPublisher<Event, Never> in
             switch state {
             case .loadingList:
                 return service
-                    .fetch(with: TVShowListParameter(query: query))
+                    .fetch(with: ShowListParameter(query: query))
                     .map(Event.onDataLoaded)
                     .catch { Just(Event.onFailedToLoadData($0)) }
                     .eraseToAnyPublisher()

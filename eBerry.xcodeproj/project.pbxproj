@@ -19,13 +19,13 @@
 		E0A5F87129842BA600BA4220 /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87029842BA600BA4220 /* URLSessionManager.swift */; };
 		E0A5F87329842BC900BA4220 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87229842BC900BA4220 /* Routing.swift */; };
 		E0A5F87629842CC600BA4220 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87529842CC500BA4220 /* Show.swift */; };
-		E0A5F87A29842D7D00BA4220 /* TVShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */; };
+		E0A5F87A29842D7D00BA4220 /* ShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87929842D7D00BA4220 /* ShowListModel.swift */; };
 		E0A5F87C29842DB600BA4220 /* TVShowDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87B29842DB600BA4220 /* TVShowDataService.swift */; };
 		E0A5F87E29842E6B00BA4220 /* TVShowListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87D29842E6B00BA4220 /* TVShowListParameter.swift */; };
 		E0A5F88029842EC000BA4220 /* DataFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */; };
 		E0A5F88329842F1100BA4220 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88229842F1100BA4220 /* Feedback.swift */; };
 		E0A5F88529842F2500BA4220 /* Publishers+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88429842F2500BA4220 /* Publishers+Ext.swift */; };
-		E0A5F887298430FC00BA4220 /* TVShowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F886298430FC00BA4220 /* TVShowListView.swift */; };
+		E0A5F887298430FC00BA4220 /* ShowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F886298430FC00BA4220 /* ShowListView.swift */; };
 		E0A5F88A2984314E00BA4220 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F8892984314E00BA4220 /* Spinner.swift */; };
 		E0A5F88C2984317700BA4220 /* EmptyContentText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88B2984317700BA4220 /* EmptyContentText.swift */; };
 		E0A5F88E2984319B00BA4220 /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88D2984319B00BA4220 /* ActionButtonView.swift */; };
@@ -77,13 +77,13 @@
 		E0A5F87029842BA600BA4220 /* URLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
 		E0A5F87229842BC900BA4220 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		E0A5F87529842CC500BA4220 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
-		E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListModel.swift; sourceTree = "<group>"; };
+		E0A5F87929842D7D00BA4220 /* ShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListModel.swift; sourceTree = "<group>"; };
 		E0A5F87B29842DB600BA4220 /* TVShowDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDataService.swift; sourceTree = "<group>"; };
 		E0A5F87D29842E6B00BA4220 /* TVShowListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListParameter.swift; sourceTree = "<group>"; };
 		E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchManager.swift; sourceTree = "<group>"; };
 		E0A5F88229842F1100BA4220 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		E0A5F88429842F2500BA4220 /* Publishers+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publishers+Ext.swift"; sourceTree = "<group>"; };
-		E0A5F886298430FC00BA4220 /* TVShowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListView.swift; sourceTree = "<group>"; };
+		E0A5F886298430FC00BA4220 /* ShowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListView.swift; sourceTree = "<group>"; };
 		E0A5F8892984314E00BA4220 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		E0A5F88B2984317700BA4220 /* EmptyContentText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyContentText.swift; sourceTree = "<group>"; };
 		E0A5F88D2984319B00BA4220 /* ActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		E0A5F84329842AD200BA4220 /* eBerry */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F87429842C2300BA4220 /* TVSHowFeature */,
+				E0A5F87429842C2300BA4220 /* TVShowFeature */,
 				E0A5F86E29842B6300BA4220 /* General */,
 				E0A5F84429842AD200BA4220 /* eBerryApp.swift */,
 				E0A5F84829842AD400BA4220 /* Assets.xcassets */,
@@ -207,13 +207,13 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		E0A5F87429842C2300BA4220 /* TVSHowFeature */ = {
+		E0A5F87429842C2300BA4220 /* TVShowFeature */ = {
 			isa = PBXGroup;
 			children = (
 				E0A5F89629843E6900BA4220 /* Service */,
 				E0A5F89529843E5A00BA4220 /* MVVM */,
 			);
-			path = TVSHowFeature;
+			path = TVShowFeature;
 			sourceTree = "<group>";
 		};
 		E0A5F88129842EDB00BA4220 /* Extensions */ = {
@@ -259,8 +259,8 @@
 		E0A5F89D2986A5A300BA4220 /* Show List */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F87929842D7D00BA4220 /* TVShowListModel.swift */,
-				E0A5F886298430FC00BA4220 /* TVShowListView.swift */,
+				E0A5F87929842D7D00BA4220 /* ShowListModel.swift */,
+				E0A5F886298430FC00BA4220 /* ShowListView.swift */,
 			);
 			path = "Show List";
 			sourceTree = "<group>";
@@ -432,7 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E067B4FC2987C229009A188F /* SearchView.swift in Sources */,
-				E0A5F87A29842D7D00BA4220 /* TVShowListModel.swift in Sources */,
+				E0A5F87A29842D7D00BA4220 /* ShowListModel.swift in Sources */,
 				E0A5F87E29842E6B00BA4220 /* TVShowListParameter.swift in Sources */,
 				E0A5F8902984320500BA4220 /* Layout.swift in Sources */,
 				E0A5F88A2984314E00BA4220 /* Spinner.swift in Sources */,
@@ -444,7 +444,7 @@
 				E0A5F8A02986A5D900BA4220 /* ShowViewViewModel.swift in Sources */,
 				E0A5F88029842EC000BA4220 /* DataFetchManager.swift in Sources */,
 				E0A5F87129842BA600BA4220 /* URLSessionManager.swift in Sources */,
-				E0A5F887298430FC00BA4220 /* TVShowListView.swift in Sources */,
+				E0A5F887298430FC00BA4220 /* ShowListView.swift in Sources */,
 				E0A5F88C2984317700BA4220 /* EmptyContentText.swift in Sources */,
 				E0A5F88529842F2500BA4220 /* Publishers+Ext.swift in Sources */,
 				E0A5F892298432DC00BA4220 /* View+Ext.swift in Sources */,

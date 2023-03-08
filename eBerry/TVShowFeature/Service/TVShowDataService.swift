@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 
-class TVShowDataService: DataFetchManager {
-    func fetch(with parameters: TVShowListParameter) -> AnyPublisher<[TVShowElement], Error> {
+class ShowDataService: DataFetchManager {
+    func fetch(with parameters: ShowListParameter) -> AnyPublisher<[ShowElement], Error> {
         return execute(parameters, errorType: Error.self)
     }
 }

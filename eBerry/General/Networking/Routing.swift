@@ -6,7 +6,6 @@
 //
 
 import Foundation
-let projectBaseURL = "https://api.tvmaze.com/"
 
 protocol Routing {
     var baseURLString: String { get }
