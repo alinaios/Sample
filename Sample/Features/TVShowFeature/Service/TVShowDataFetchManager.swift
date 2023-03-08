@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ShowDataService: DataFetchManager {
+class TVShowDataFetchManager: DataFetchManager {
     func fetch(with parameters: ShowListParameter) -> AnyPublisher<[ShowElement], Error> {
         return execute(parameters, errorType: Error.self)
     }

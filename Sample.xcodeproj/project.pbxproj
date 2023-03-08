@@ -17,7 +17,7 @@
 		E0A5F87329842BC900BA4220 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87229842BC900BA4220 /* Routing.swift */; };
 		E0A5F87629842CC600BA4220 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87529842CC500BA4220 /* Show.swift */; };
 		E0A5F87A29842D7D00BA4220 /* ShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87929842D7D00BA4220 /* ShowListModel.swift */; };
-		E0A5F87C29842DB600BA4220 /* ShowDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87B29842DB600BA4220 /* ShowDataService.swift */; };
+		E0A5F87C29842DB600BA4220 /* TVShowDataFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87B29842DB600BA4220 /* TVShowDataFetchManager.swift */; };
 		E0A5F87E29842E6B00BA4220 /* ShowListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87D29842E6B00BA4220 /* ShowListParameter.swift */; };
 		E0A5F88029842EC000BA4220 /* DataFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */; };
 		E0A5F88329842F1100BA4220 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88229842F1100BA4220 /* Feedback.swift */; };
@@ -38,6 +38,7 @@
 		E0DED18B298ADCE3000BEBE9 /* fullResponse.json in Sources */ = {isa = PBXBuildFile; fileRef = E0DED184298AC180000BEBE9 /* fullResponse.json */; };
 		E0DED18D298ADD0A000BEBE9 /* fullResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E0DED184298AC180000BEBE9 /* fullResponse.json */; };
 		E0E8CAED29B8DDC600928274 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E0E8CAEC29B8DDC600928274 /* README.md */; };
+		E0E8CAF529B9088000928274 /* FetchManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E8CAF429B9088000928274 /* FetchManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,7 @@
 		E0A5F87229842BC900BA4220 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		E0A5F87529842CC500BA4220 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		E0A5F87929842D7D00BA4220 /* ShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListModel.swift; sourceTree = "<group>"; };
-		E0A5F87B29842DB600BA4220 /* ShowDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDataService.swift; sourceTree = "<group>"; };
+		E0A5F87B29842DB600BA4220 /* TVShowDataFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDataFetchManager.swift; sourceTree = "<group>"; };
 		E0A5F87D29842E6B00BA4220 /* ShowListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListParameter.swift; sourceTree = "<group>"; };
 		E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchManager.swift; sourceTree = "<group>"; };
 		E0A5F88229842F1100BA4220 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		E0DED184298AC180000BEBE9 /* fullResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fullResponse.json; sourceTree = "<group>"; };
 		E0DED186298AC64F000BEBE9 /* XCTestCase+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Ext.swift"; sourceTree = "<group>"; };
 		E0E8CAEC29B8DDC600928274 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E0E8CAF429B9088000928274 /* FetchManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManagerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +168,9 @@
 		E0A5F86F29842B8500BA4220 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */,
+				E0E8CAF429B9088000928274 /* FetchManagerProtocol.swift */,
 				E0A5F87029842BA600BA4220 /* URLSessionManager.swift */,
+				E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */,
 				E0A5F87229842BC900BA4220 /* Routing.swift */,
 			);
 			path = Networking;
@@ -216,7 +219,7 @@
 		E0A5F89629843E6900BA4220 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F87B29842DB600BA4220 /* ShowDataService.swift */,
+				E0A5F87B29842DB600BA4220 /* TVShowDataFetchManager.swift */,
 				E0A5F87D29842E6B00BA4220 /* ShowListParameter.swift */,
 			);
 			path = Service;
@@ -407,6 +410,7 @@
 				E0A5F87E29842E6B00BA4220 /* ShowListParameter.swift in Sources */,
 				E0A5F8902984320500BA4220 /* Layout.swift in Sources */,
 				E0A5F88A2984314E00BA4220 /* Spinner.swift in Sources */,
+				E0E8CAF529B9088000928274 /* FetchManagerProtocol.swift in Sources */,
 				E0A5F87329842BC900BA4220 /* Routing.swift in Sources */,
 				E0A5F88329842F1100BA4220 /* Feedback.swift in Sources */,
 				E0A5F88E2984319B00BA4220 /* ActionButtonView.swift in Sources */,
@@ -421,7 +425,7 @@
 				E0A5F892298432DC00BA4220 /* View+Ext.swift in Sources */,
 				E0A5F87629842CC600BA4220 /* Show.swift in Sources */,
 				E0A5F84529842AD200BA4220 /* SampleApp.swift in Sources */,
-				E0A5F87C29842DB600BA4220 /* ShowDataService.swift in Sources */,
+				E0A5F87C29842DB600BA4220 /* TVShowDataFetchManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

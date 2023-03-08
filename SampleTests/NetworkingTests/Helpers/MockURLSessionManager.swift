@@ -9,7 +9,7 @@ import Foundation
 import Combine
 @testable import Sample
 
-final class MockURLSessionManager: URLSessionManagerProtocol {
+final class MockURLSessionManager: FetchManagerProtocol {
 
     var request: URLRequest?
 

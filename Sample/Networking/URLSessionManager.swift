@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class URLSessionManager: URLSessionManagerProtocol {
+final class URLSessionManager: FetchManagerProtocol {
 
     init() {}
 
