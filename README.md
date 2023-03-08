@@ -2,14 +2,14 @@
 
 User searches a TV show from a list https://api.tvmaze.com/ and previews the details
 
-
+```
 ### Frameworks and SDK
-
 SwiftUI + Combine
 Xcode Version 14.2
-
+```
 ### Architectural Overview
 
+![Feed Loader drawio](https://user-images.githubusercontent.com/85871814/223823975-01b0a000-07d8-4549-b3a9-940ebc6e4cce.png)
 
 ### API contract of a list of TV shows
 
@@ -81,7 +81,7 @@ Xcode Version 14.2
 
 ```
 
-SwiftUI + Combine
+
 ### Scenarios (Acceptance Criteria)
 
 ``` 
