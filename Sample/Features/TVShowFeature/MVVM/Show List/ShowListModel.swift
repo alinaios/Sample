@@ -63,6 +63,7 @@ extension ShowListViewModel {
     }
 }
 extension ShowListViewModel {
+    // Reduce specifies how the state changes in response to an event
     static func reduce(_ state: State, _ event: Event) -> State {
         switch state {
         case .loadingList:

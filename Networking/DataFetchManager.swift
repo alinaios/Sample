@@ -12,8 +12,8 @@ class DataFetchManager {
 
     let manager: FetchManagerProtocol
 
-    init(with sessionManager: FetchManagerProtocol) {
-        manager = sessionManager
+    init(with fetchManager: FetchManagerProtocol) {
+        manager = fetchManager
     }
 
     func execute<T: Decodable, R: Routing, E: Error>(_ route: R, errorType: E.Type) -> AnyPublisher<T, Error> {

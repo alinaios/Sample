@@ -157,6 +157,7 @@
 		E0A5F86E29842B6300BA4220 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				E0A5F88F2984320500BA4220 /* Layout.swift */,
 				E0A5F8882984313000BA4220 /* Common Views */,
 				E0A5F88129842EDB00BA4220 /* Extensions */,
 			);
@@ -196,7 +197,6 @@
 		E0A5F8882984313000BA4220 /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F88F2984320500BA4220 /* Layout.swift */,
 				E0A5F8892984314E00BA4220 /* Spinner.swift */,
 				E0A5F88B2984317700BA4220 /* EmptyContentText.swift */,
 				E0A5F88D2984319B00BA4220 /* ActionButtonView.swift */,

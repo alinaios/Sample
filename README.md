@@ -84,20 +84,20 @@ Xcode Version 14.2
 
 ### Scenarios (Acceptance Criteria)
 
-``` :white_check_mark: 
-Given application has internet connection
+```  
+:white_check_mark: Given application has internet connection
 When user launches the application
 User can preview list of tv shows with predefined search query
 ```
 
-``` :white_check_mark: 
-Given application has NO internet connection
+``` 
+:white_check_mark: Given application has NO internet connection
 When user launches the application
 User recieves no internet connection message and possibility to retry
 ```
 
-``` :white_check_mark:
-Given application has internet connection
+``` 
+:white_check_mark: Given application has internet connection
 When user launches the application
 User can preview list of tv shows with predefined search query
 When user taps any specific show
