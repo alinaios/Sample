@@ -5,8 +5,8 @@
   Created by A H on 2023-01-31.
   
 */
-"search" = "What are you looking for?";
-"no results %@" = "We did not find anything related to \"%@\".";
+"search" = "Vilket tv-program letar du efter?";
+"no results %@" = "Vi hittade inget relaterat till \"%@\".";
 "default placeholder" = "fun";
-"link" = "Official site";
-"retry" = "Retry";
+"link" = "Officiell sida";
+"retry" = "Försök igen";
