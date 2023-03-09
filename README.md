@@ -6,9 +6,10 @@ User searches a TV show from a list https://api.tvmaze.com/ and previews the det
 SwiftUI + Combine
 Xcode Version 14.2
 ```
-### Architectural Overview
 
-![Feed Loader drawio](https://user-images.githubusercontent.com/85871814/223823975-01b0a000-07d8-4549-b3a9-940ebc6e4cce.png)
+### Architectural Overview
+![Feed Loader-3](https://user-images.githubusercontent.com/85871814/223987603-b375f36d-5556-4405-91b8-c2a66d8908b5.jpg)
+
 
 ### API contract of a list of TV shows
 
