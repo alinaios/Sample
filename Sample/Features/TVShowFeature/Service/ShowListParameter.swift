@@ -11,10 +11,6 @@ struct ShowListParameter {
 }
 
 extension ShowListParameter: Routing {
-    var method: RequestType {
-        return .GET
-    }
-
     var routePath: String {
         return "search/shows?q=\(query)"
     }

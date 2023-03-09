@@ -23,7 +23,7 @@ extension Routing {
     }
 
     var method: RequestType {
-        return .POST
+        return .GET
     }
 
     var routePath: String {
