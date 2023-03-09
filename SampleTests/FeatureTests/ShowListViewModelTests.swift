@@ -44,7 +44,7 @@ final class ShowListViewModelTests: XCTestCase {
     func testFullShowList() throws {
         let request = URLRequest(url: Bundle.main.url(forResource: "fullResponse", withExtension: "json")!)
 
-        service = TVShowDataFetchManager(with: MockURLSessionManager(urlRequest: request))
+        service = DataFetchManager(with: MockURLSessionManager(urlRequest: request))
 
         // Initilize view model
         viewModel = ShowListViewModel(service: service)

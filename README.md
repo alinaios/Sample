@@ -11,7 +11,7 @@ Xcode Version 14.2
 ![Feed Loader-3](https://user-images.githubusercontent.com/85871814/223987603-b375f36d-5556-4405-91b8-c2a66d8908b5.jpg)
 
 
-### API contract of a list of TV shows
+### API contract of TV shows
 
 ```
 200 RESPONSE      
@@ -84,19 +84,19 @@ Xcode Version 14.2
 
 ### Scenarios (Acceptance Criteria)
 
-``` 
+``` :white_check_mark: 
 Given application has internet connection
 When user launches the application
 User can preview list of tv shows with predefined search query
 ```
 
-``` 
+``` :white_check_mark: 
 Given application has NO internet connection
 When user launches the application
 User recieves no internet connection message and possibility to retry
 ```
 
-``` 
+``` :white_check_mark:
 Given application has internet connection
 When user launches the application
 User can preview list of tv shows with predefined search query
