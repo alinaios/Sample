@@ -10,7 +10,7 @@ import Combine
 import XCTest
 
 final class ShowListViewModelTests: XCTestCase {
-    var service: TVShowDataFetchManager!
+    var service: DataFetchManager!
     var viewModel: ShowListViewModel!
     private var bag = Set<AnyCancellable>()
 
@@ -18,7 +18,7 @@ final class ShowListViewModelTests: XCTestCase {
 
         let request = URLRequest(url: Bundle.main.url(forResource: "fullResponse", withExtension: "json")!)
 
-        service = TVShowDataFetchManager(with: MockURLSessionManager(urlRequest: request))
+        service = DataFetchManager(with: MockURLSessionManager(urlRequest: request))
 
         // Initilize view model
         viewModel = ShowListViewModel(service: service)

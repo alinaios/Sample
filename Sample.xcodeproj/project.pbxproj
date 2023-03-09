@@ -17,7 +17,6 @@
 		E0A5F87329842BC900BA4220 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87229842BC900BA4220 /* Routing.swift */; };
 		E0A5F87629842CC600BA4220 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87529842CC500BA4220 /* Show.swift */; };
 		E0A5F87A29842D7D00BA4220 /* ShowListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87929842D7D00BA4220 /* ShowListModel.swift */; };
-		E0A5F87C29842DB600BA4220 /* TVShowDataFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87B29842DB600BA4220 /* TVShowDataFetchManager.swift */; };
 		E0A5F87E29842E6B00BA4220 /* ShowListParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87D29842E6B00BA4220 /* ShowListParameter.swift */; };
 		E0A5F88029842EC000BA4220 /* DataFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */; };
 		E0A5F88329842F1100BA4220 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5F88229842F1100BA4220 /* Feedback.swift */; };
@@ -65,7 +64,6 @@
 		E0A5F87229842BC900BA4220 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		E0A5F87529842CC500BA4220 /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		E0A5F87929842D7D00BA4220 /* ShowListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListModel.swift; sourceTree = "<group>"; };
-		E0A5F87B29842DB600BA4220 /* TVShowDataFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDataFetchManager.swift; sourceTree = "<group>"; };
 		E0A5F87D29842E6B00BA4220 /* ShowListParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListParameter.swift; sourceTree = "<group>"; };
 		E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchManager.swift; sourceTree = "<group>"; };
 		E0A5F88229842F1100BA4220 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
@@ -168,8 +166,8 @@
 		E0A5F86F29842B8500BA4220 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E0E8CAF429B9088000928274 /* FetchManagerProtocol.swift */,
 				E0A5F87029842BA600BA4220 /* URLSessionManager.swift */,
+				E0E8CAF429B9088000928274 /* FetchManagerProtocol.swift */,
 				E0A5F87F29842EC000BA4220 /* DataFetchManager.swift */,
 				E0A5F87229842BC900BA4220 /* Routing.swift */,
 			);
@@ -179,7 +177,7 @@
 		E0A5F87429842C2300BA4220 /* TVShowFeature */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F89629843E6900BA4220 /* Service */,
+				E0A5F89629843E6900BA4220 /* Service  */,
 				E0A5F89529843E5A00BA4220 /* MVVM */,
 			);
 			path = TVShowFeature;
@@ -216,13 +214,12 @@
 			path = MVVM;
 			sourceTree = "<group>";
 		};
-		E0A5F89629843E6900BA4220 /* Service */ = {
+		E0A5F89629843E6900BA4220 /* Service  */ = {
 			isa = PBXGroup;
 			children = (
-				E0A5F87B29842DB600BA4220 /* TVShowDataFetchManager.swift */,
 				E0A5F87D29842E6B00BA4220 /* ShowListParameter.swift */,
 			);
-			path = Service;
+			path = "Service ";
 			sourceTree = "<group>";
 		};
 		E0A5F89D2986A5A300BA4220 /* Show List */ = {
@@ -425,7 +422,6 @@
 				E0A5F892298432DC00BA4220 /* View+Ext.swift in Sources */,
 				E0A5F87629842CC600BA4220 /* Show.swift in Sources */,
 				E0A5F84529842AD200BA4220 /* SampleApp.swift in Sources */,
-				E0A5F87C29842DB600BA4220 /* TVShowDataFetchManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
