@@ -14,7 +14,7 @@ final class ShowListViewModelTests: XCTestCase {
     var viewModel: ShowListViewModel!
     private var bag = Set<AnyCancellable>()
 
-    func testEmptyShowList() throws {
+    func test_send_onAppear_withEmptyList() throws {
 
         let request = URLRequest(url: Bundle.main.url(forResource: "fullResponse", withExtension: "json")!)
 
@@ -41,7 +41,7 @@ final class ShowListViewModelTests: XCTestCase {
         }
     }
 
-    func testFullShowList() throws {
+    func test_send_onAppear_withLoadedList() throws {
         let request = URLRequest(url: Bundle.main.url(forResource: "fullResponse", withExtension: "json")!)
 
         service = DataFetchManager(with: MockURLSessionManager(urlRequest: request))
