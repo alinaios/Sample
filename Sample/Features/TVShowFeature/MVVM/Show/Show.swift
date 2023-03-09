@@ -71,11 +71,11 @@ enum Language: Codable {
 // MARK: - Links
 struct Links: Codable {
     let linksSelf: PreviousEpisode?
-    let PreviousEpisode: PreviousEpisode?
+    let previousEpisode: PreviousEpisode?
 
     enum CodingKeys: String, CodingKey {
         case linksSelf = "self"
-        case PreviousEpisode
+        case previousEpisode
     }
 }
 

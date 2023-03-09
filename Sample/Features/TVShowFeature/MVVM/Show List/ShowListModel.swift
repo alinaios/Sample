@@ -13,7 +13,7 @@ final class ShowListViewModel: ObservableObject {
     private var bag = Set<AnyCancellable>()
     private let input = PassthroughSubject<Event, Never>()
     private var service: DataFetchManager
-    
+
     init(service: DataFetchManager) {
         self.service = service
     }
